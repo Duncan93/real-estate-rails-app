@@ -11,18 +11,24 @@ This tool allows real estate agents to upload and manager their past real estate
 * Have the tech installed in the dev env
 * Clone the repo locally
 * Run `bundle install`
-* Run `db:setup`
+* Run `rake db:setup`
 * Run `rails server`
 * Navigate to `localhost:3000`
 
 ## Assignments (choose at least 2)
-1. Build a bulk transaction uploader - allow agents to upload a CSV where each row represents a new transaction
+- [ ] Build a bulk transaction uploader - allow agents to upload a CSV where each row represents a new transaction
   * Each column should represent the columns in the model
   * De-dupe on `address`, `zip` and `selling_date`
-2. Add model and client-side validation and make the form sexier
-3. Paginate the transactions list on the agent profile page
-4. Sort the transactions list on the agent profile page by selling_date but sort transactions where the `property_type` is "land" or "mobile_home" at the bottom of the list
-5. Build filtering and sorting controls to the transaction list on the agent profile
-6. Optimize / speed up the `UploadedTransaction` queries - assume there are 10 million rows in that table
-7. Allow the agent to select which side of the transaction they represented (seller, buyer or both)
-8. Increase test coverage and add front-end testing
+- [ ] Add model and client-side validation and make the form sexier
+- [x] Paginate the transactions list on the agent profile page
+- [x] Sort the transactions list on the agent profile page by selling_date but sort transactions where the `property_type` is "land" or "mobile_home" at the bottom of the list
+  - My interpretation: sort first by selling_date, then by property_type with a discriminator
+- [ ] Build filtering and sorting controls to the transaction list on the agent profile
+- [ ] Optimize / speed up the `UploadedTransaction` queries - assume there are 10 million rows in that table
+- [ ] Allow the agent to select which side of the transaction they represented (seller, buyer or both)
+- [ ] Increase test coverage and add front-end testing
+
+todo: next figure out how to replace the contents of the table on a button press
+ - can embedded JS be used?
+ - _might_ be better as a route so calls don't get fronted, but that's a lot more complicated
+   - perhaps just mention that, but that I'd need to spend more time digging into Rails

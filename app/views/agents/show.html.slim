@@ -12,7 +12,7 @@ table
       th Listing Price
       th Sold
       th Selling Price
-      th
+      th Property Type
   tbody
     - @uploaded_transactions.each do |uploaded_transaction|
       tr
@@ -21,6 +21,7 @@ table
         td = uploaded_transaction.listing_price
         td = uploaded_transaction.selling_date
         td = uploaded_transaction.selling_price
+        td = uploaded_transaction.property_type
 
 div class="pagination-wrapper"
   = will_paginate @uploaded_transactions, renderer: BootstrapPagination::Rails
