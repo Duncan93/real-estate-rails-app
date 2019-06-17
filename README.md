@@ -31,4 +31,4 @@ This tool allows real estate agents to upload and manager their past real estate
 todo: next figure out how to replace the contents of the table on a button press
  - can embedded JS be used?
  - _might_ be better as a route so calls don't get fronted, but that's a lot more complicated
-   - perhaps just mention that, but that I'd need to spend more time digging into Rails
+   - I'd need to spend more time digging into Rails
